@@ -9,8 +9,9 @@ public class CheckDigit
    {  
      /* to be implemented in part (a) */
      int sum = 0;
-     for(int i = 1; i < getNumberOfDigits(num); i++)
+     for(int i = 1; i < getNumberOfDigits(num); i++){
        sum += (8-i)*getDigit(num,i);
+     }
      return sum%10;
    }
  
@@ -26,9 +27,12 @@ public class CheckDigit
      int check = numWithCheckDigit%10;
      int dog = numWithCheckDigit/10;
      int newCheck = getCheck(dog);
-     if(check == newCheck)
+     if(check == newCheck){
        return true;
-     return false;
+     }
+     else{
+       return false;
+     }
    }    
    
    /** Returns the number of digits in num. */    
